@@ -1,11 +1,13 @@
 
 import React from "react";
 import './../styles/App.css';
-
+import Child from './Child.js';
 const App = () => {
+  const[isLoggedIn,setLogin]=useState(false);
   return (
     <div>
-        {/* Do not remove the main div */}
+      <h1>Parent Component</h1>
+     <Child isLoggedIn={isLoggedIn} setLogin={setLogin}/>
     </div>
   )
 }
